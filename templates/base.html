@@ -1,28 +1,76 @@
 <html>
 <head>
 	<title>My Pi estimation Website</title>
+	<style type = "text/css">
+	.content{max-width:500px;
+					margin:auto;
+					border: 0.2rem solid #fff;
+  				border-radius: 2rem;
+  				padding: 2em;
+  				box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+              inset 0 0 1.3rem #bc13fe;
+          font-variant: small-caps;
+					}
+		h1 	{
+				text-decoration: underline;
+				}
+body{
+				background-color: #000;
+				}
+.neonText {
+  color: #fff;
+  text-shadow:
+      0 0 7px #333,
+      0 0 10px #333,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #123,
+      0 0 92px #123,
+      0 0 102px #0fa,
+      0 0 151px #345;
+}
+.button {
+	background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+	</style>
 </head>
 <body>
+<div class="content">
 	{% block body %}
 	{% endblock %}
 	<hr/>
-	<p>
+	<p class="neonText">
 		<form method="post" action="/estimate">
-			<label for="iterations"><h3>Iterations</h3></label>
+			<label for="iterations"><h3 class="neonText">Iterations</h3></label>
 			<input name="iterations" type="number" id="iterations" required>
 			<br/>
-			<label><h3>Algorithm : </h3></label>
+			<label><h3 class="neonText">Algorithm : </h3></label>
 			<br/>
-			<label for="montecarlo">Monte Carlo simulation</label>
+			<label for="montecarlo" class="neonText">Monte Carlo simulation</label>
 			<input type="radio" name="algorithm" id="montecarlo" value="mc" required />
 			<br/>
-			<label for="wallisproduct">Wallis Product</label>
+			<label for="wallisproduct" class="neonText">Wallis Product</label>
 			<input type="radio" name="algorithm" id="wallisproduct" value="wallis" required />
-			<br/>
-			<input type="submit" value="compute">
+			<br/></br>
+			<input class="button" type="submit" value="compute">
 		</form>
 	</p>
 	<hr/>
-	You can know more about me from my <a href="https://www.instagram.com/mu_sha_raf_/">Instagram</a> or <a href="https://in.linkedin.com/in/muhammedmusharaf007">Linkedin</a>
+	<p class="neonText">You can know more about me from my <a href="https://www.instagram.com/mu_sha_raf_/" class = "neonText">Instagram</a> or <a href="https://in.linkedin.com/in/muhammedmusharaf007" class="neonText">Linkedin</a>
+</div>
 </body>
 </html>	

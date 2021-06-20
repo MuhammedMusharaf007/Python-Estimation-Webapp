@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block body%}
-	<h1>Estimate of Pi : {{algorithm}}</h1>
-	<p><a href="/">Return to home</a></p>
+	<h1 class="neonText">Estimate of Pi : {{algorithm}}</h1>
+	<p class="neonText"><a href="/" class="button">Return to home</a></p>
 	<hr/>
-	<p>
-		The estimate of pi after <h3>{{iters}}</h3> iterations using the <h3>{{algorithm}}</h3> is <h3>{{estimate}}</h3>
+	<p class="neonText">
+		The estimate of pi after <b>{{iters}}</b> iterations using the <b>{{algorithm}}</b> is <h3 class="neonText">{{estimate}}</h3>
 	</p>
-	<p>Please use the form below for another estimate</p>
+	<p class="neonText">Please use the form below for another estimate</p>
 {% endblock %}
