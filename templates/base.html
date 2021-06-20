@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>My Pi estimation Website</title>
+</head>
+<body>
+	{% block body %}
+	{% endblock %}
+	<hr/>
+	<p>
+		<form method="post" action="/estimate">
+			<label for="iterations"><h3>Iterations</h3></label>
+			<input name="iterations" type="number" id="iterations" required>
+			<br/>
+			<label><h3>Algorithm : </h3></label>
+			<br/>
+			<label for="montecarlo">Monte Carlo simulation</label>
+			<input type="radio" name="algorithm" id="montecarlo" value="mc" required />
+			<br/>
+			<label for="wallisproduct">Wallis Product</label>
+			<input type="radio" name="algorithm" id="wallisproduct" value="wallis" required />
+			<br/>
+			<input type="submit" value="compute">
+		</form>
+	</p>
+	<hr/>
+	You can know more about me from my <a href="https://www.instagram.com/mu_sha_raf_/">Instagram</a> or <a href="https://in.linkedin.com/in/muhammedmusharaf007">Linkedin</a>
+</body>
+</html>	
