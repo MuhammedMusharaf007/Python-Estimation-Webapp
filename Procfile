@@ -1,1 +1,1 @@
-web: gunicorn app: Vostro 
+web: gunicorn app:app

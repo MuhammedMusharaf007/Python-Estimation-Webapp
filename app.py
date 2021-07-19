@@ -2,7 +2,7 @@
 from flask import Flask, request, render_template
 import estimators
 
-app= Flask("Vostro")
+app= Flask(__name__)
 
 
 @app.route("/") #decorator
@@ -24,7 +24,3 @@ def estimate():
 												algorithm = names[algorithm],
 												iters = iterations,
 												estimate = estimate)
-	
-		
-if __name__=="__main__":
-	app.run()
